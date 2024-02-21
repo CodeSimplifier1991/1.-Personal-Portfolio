@@ -10,9 +10,11 @@
 
 :root {
   --color-primary: #7a3aac;
+  --color-primary-hover: #b049ff;
+
   --color-secondary: #3f7ba6;
 
-  --color-body: #03055a;
+  --color-body: #918ca4;
 
   --color-white: #fff;
   --color-black: #000;
@@ -53,7 +55,8 @@ html {
 body {
   font-family: Montserrat, Arial, Helvetica, sans-serif;
   color: var(--color-body);
-  background-color: var(--color-primary);
+  font-size: 2.4rem;
+  line-height: 1.5; /*1.5x times of font size => 1.5 X 10px */
 }
 
 h2 {
@@ -103,35 +106,40 @@ p {
 
 /*-------------------- START - BUTTONS --------------------*/
 .btn {
-  padding: 0.5rem 4rem;
-  border-radius: 15px;
+  border-radius: 40px;
+  border: 0; /*Removes the border added by the browser by default*/
   cursor: pointer;
-  outline: none;
-  font-size: 1.4rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 1rem 0; /*Vertical Horizental*/
+  outline: 0; /*Removes the border added by the browser by default*/
+  padding: 2rem 3rem;
+  text-align: center; /*Always keeps the text in thecenter*/
+  text-transform: uppercase;
+  white-space: nowrap; /*Text always stays in one line in case the width changed*/
+  letter-spacing: 1px;
 }
 
 .btn--primary {
   background-color: var(--color-primary);
   color: var(--color-white);
-  font-weight: 400;
 }
 
 .btn--primary:hover {
-  background-color: var(--color-grey-5);
+  background-color: var(--color-primary-hover);
 }
 
 .btn--outline {
   background-color: var(--color-white);
-  border: 2px solid var(--color-primary);
   color: var(--color-primary);
+  border: 2px solid var(--color-primary);
 }
 
 .btn--outline:hover {
-  background-color: var(--color-primary);
-  border: 2px solid var(--color-white);
+  background-color: var(--color-primary-hover);
   color: white;
+  border: 2px solid var(--color-primary-hover);
 }
-
 /*-------------------- END - BUTTONS --------------------*/
 
 /*-------------------- START - ICONS --------------------*/
