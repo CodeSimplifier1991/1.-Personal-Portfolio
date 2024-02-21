@@ -11,6 +11,7 @@
 :root {
   --color-primary: #7a3aac;
   --color-primary-hover: #b049ff;
+  --color-primary-dark: #56277a;
 
   --color-secondary: #3f7ba6;
 
@@ -143,19 +144,36 @@ p {
 /*-------------------- END - BUTTONS --------------------*/
 
 /*-------------------- START - ICONS --------------------*/
-.icon-container {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+/* Adds a background to the icon */
+.icon-background {
   align-items: center;
-  cursor: pointer;
+  background: var(--color-primary-dark);
+  border-radius: 100%;
+  display: inline-flex;
+  height: 64px;
+  justify-content: center;
+  width: 64px;
+}
+/* On hover effect the color & transition will apply */
+.icon-background:hover {
+  background: var(--color-primary-hover);
+  transition: var(--transition-all-04s-ease-in-out);
 }
 
-.icon-container i {
-  fill: var(--color-primary);
+/* A div that holds the icons
+Sizes are identical to the icon background*/
+.icon-container {
+  align-items: center;
+  border-radius: 100%;
+  display: inline-flex;
+  height: 40px;
+  justify-content: center;
+  width: 40px;
+}
+
+/* Style the <i> element within the container */
+.icon-container > i {
+  color: var(--color-white);
 }
 /*-------------------- END - ICONS --------------------*/
 
