@@ -53,6 +53,7 @@ html {
 body {
   font-family: Montserrat, Arial, Helvetica, sans-serif;
   color: var(--color-body);
+  background-color: var(--color-primary);
 }
 
 h2 {
@@ -75,6 +76,7 @@ p {
   height: 100px;
   justify-content: center;
   width: 100px;
+  margin: 0 auto;
 }
 /* Resizes the profile picture */
 .profile-pic {
