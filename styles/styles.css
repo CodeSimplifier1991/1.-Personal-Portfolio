@@ -5,7 +5,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  list-style: none;
+  list-style: none; /*Removes all the bullet points for lists*/
 }
 
 :root {
@@ -16,6 +16,7 @@
   --color-secondary: #3f7ba6;
 
   --color-body: #918ca4;
+  --color-heading: #1b0760;
 
   --color-white: #fff;
   --color-black: #000;
@@ -176,6 +177,67 @@ Sizes are identical to the icon background*/
   color: var(--color-white);
 }
 /*-------------------- END - ICONS --------------------*/
+
+/*-------------------- START - LISTS --------------------*/
+.list {
+  padding-left: 0; /*Removes left padding added by the browsers*/
+  color: var(--color-heading);
+}
+
+/* Adds the left padding to all vertical lists */
+.list--vertical {
+  padding-left: 3rem;
+}
+
+/* Adds padding to all list items in the vertical lists */
+.list--vertical .list__item {
+  padding-left: 0.5rem;
+  margin-bottom: 1rem;
+}
+/*-------------------- END - LISTS --------------------*/
+
+/*-------------------- START - COLLAPSIBLE --------------------*/
+/* It adds a background to collapsible chevron */
+.chevron-background {
+  align-items: center;
+  background: var(--color-grey-3);
+  border-radius: 100%;
+  display: flex;
+  /* display: inline-flex; */
+  height: 50px;
+  justify-content: center;
+  width: 50px;
+}
+
+.collapsible__icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+/* In the state of collapsbile, the chevron is pointing down */
+.collapsible__chevron {
+  transform: rotate(0deg);
+  transition: transform 0.3s;
+}
+
+/*On click event, if the collapsible--expaned has a chevron, transform the icon*/
+.collapsible--expanded .collapsible__chevron {
+  transform: rotate(90deg);
+}
+
+/*Control the collapsible content in an event of collapsible--expanded*/
+.collapsible--expanded .collapsible__content {
+  max-height: 100vh;
+  opacity: 1;
+}
+
+.collapsible__content {
+  max-height: 0; /*Used the max-height to be able to apply the animation to the content*/
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.3s;
+}
+/*-------------------- END - COLLAPSIBLE --------------------*/
 
 /*-------------------- START - HEADERS --------------------*/
 header {
